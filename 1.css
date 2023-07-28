@@ -2009,6 +2009,11 @@ video {
 }
 
 @media all and (max-width : 1255px) {
+    .responsive-image {
+        height: 83vh;
+    }
+    
+    
     .row-radius{
         border-radius: 0px 0px 0px 0px;
     }
