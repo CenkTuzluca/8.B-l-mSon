@@ -1087,6 +1087,7 @@ label {
   
   .modal {
     display: none;
+  
     position: fixed;
     top: 0;
     left: 0;
@@ -1096,9 +1097,11 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
   .modal-video {
+    overflow: hidden;
     display: block;
     max-width: 90%;
     max-height: 90%;

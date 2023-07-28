@@ -726,20 +726,56 @@
                     }
                 ]
             });
-            function openModal(videoUrl) {
-                var modal = document.getElementById("video-modal");
-                var video = document.getElementById("modal-video");
-                video.src = videoUrl;
-                modal.style.display = "flex"; // Orta açılmak için "flex" olarak değiştiriyoruz
-            }
+            
 
-            function closeModal() {
-                var modal = document.getElementById("video-modal");
-                var video = document.getElementById("modal-video");
-                video.pause();
-                video.currentTime = 0;
-                modal.style.display = "none";
-            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+  var videoThumbnails = document.querySelectorAll(".video-thumbnail");
+  var modal = document.getElementById("video-modal");
+  var modalVideo = document.getElementById("modal-video");
+
+  for (var i = 0; i < videoThumbnails.length; i++) {
+    videoThumbnails[i].addEventListener("click", function() {
+      var videoUrl = this.getAttribute("data-video-url");
+      openModal(videoUrl);
+    });
+  }
+
+  function openModal(videoUrl) {
+    modalVideo.src = videoUrl;
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden"; // Sayfanın kaydırma işlemini engelle
+  }
+
+  function closeModal() {
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Sayfanın kaydırma işlemini aç
+  }
+
+  modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  // Modal kapatıldığında sayfanın en üstüne kaydır
+  modal.addEventListener("transitionend", function() {
+    if (modal.style.display === "none") {
+      window.scrollTo(0, 0);
+    }
+  });
+
+  // Sayfa yüklendiğinde modal gizli olacak
+  modal.style.display = "none";
+});
 
 
 
