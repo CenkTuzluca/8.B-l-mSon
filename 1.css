@@ -909,6 +909,13 @@ label {
     animation: animate_text 30s linear infinite;
     /* The animation property */
 }
+
+
+.slide{
+    margin: 3rem;
+    background-color: white;
+   
+}
 .slider-container {
     position: relative;
     width: 100%;
@@ -920,12 +927,13 @@ label {
 }
 
 .slick-slider {
-    max-width: 800px;
+   
+  
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.8);
+    
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   
     z-index: 99;
 }
 .bar{
@@ -1524,8 +1532,6 @@ video {
 
 
 
-
-
   @media screen and (min-width: 24.375em) {
     .legal .legal__links {
       margin-left: auto;
@@ -1635,6 +1641,7 @@ video {
 
 /* Responsive tasarım için medya sorguları */
 @media only screen and (max-width: 768px) {
+ 
     .gallery-imgler{
     display: none;
    

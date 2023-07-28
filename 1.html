@@ -702,33 +702,35 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-     $('.slider').slick({
-    centerMode: true,
-    centerPadding: '150px',
-    slidesToShow: 1,
-    responsive: [
-      {
-        breakpoint: 1000,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
+ <script>
+    $('.slider').slick({
+  centerMode: true,
+  centerPadding: '150px',
+  slidesToShow: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '15px',
+        slidesToShow: 1
       }
-    ]
-  });
-    </script>
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+
+ </script>
 </body>
 
 </html>
