@@ -682,7 +682,7 @@ label {
 
 .responsive-image {
     width: 100%;
-    height: auto;
+    height: 92vh;
 }
 
 .image-wrapper img {
@@ -917,6 +917,7 @@ label {
    
 }
 .slider-container {
+
     position: relative;
     width: 100%;
     height: 100vh;
@@ -1017,7 +1018,29 @@ label {
 .s5-doktor {
     width: 450px;
 }
-.video-gallery {
+.mavi-border{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#17B0D9;
+    color: #fff;
+    padding: 20px 60px;
+    border-radius: 50% 50% 0% 0%;
+    cursor: pointer;
+  
+    
+  }
+  .mavi-border i{
+    font-size: 2rem;
+  }
+
+
+
+
+
+
+  .video-gallery {
     max-width: 1100px;
     margin: 0 auto;
     padding: 10px; /* Sayfa kenarlarından boşluk bırakalım */
@@ -1032,14 +1055,30 @@ label {
   
   .video-thumbnail {
     cursor: pointer;
-    flex-basis: 30%; /* 1 video için 30% genişlik ayrılacak */
-    max-width: 300px; /* En fazla 300px genişliğinde olacak */
-    margin-bottom: 20px; /* Video thumbnail'ları arasında boşluk bırakalım */
+    flex-basis: 30%; 
+    margin-bottom: 20px; 
   }
   
-  .video-thumbnail img {
-    width: 100%; /* Resmi kapsamak için genişlik %100 */
-    height: auto; /* Yükseklik otomatik olarak ayarlanacak */
+  .top-video1 img {
+    width: 670px; 
+    height: 250px; 
+    border-radius: 20px;
+
+  }
+  
+  .top-video2 img {
+    width: 320px; 
+    height: 250px; 
+    border-radius: 20px;
+  }
+  .video-thumbnail:hover{
+    filter: brightness(.5);
+  }
+  /* Altta kalan resimler için aynı boyutları kullanalım */
+  .video-thumbnail:not(.top-video1):not(.top-video2) img {
+    width: 100%;
+    height: 200px; 
+    border-radius: 20px;
   }
   
   .bottom-row {
@@ -1076,12 +1115,29 @@ label {
   }
   
   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
 .s5DoktorDiv {
     height: 100%;
 }
 .galleryy{
     max-width: 1100px;
     margin: auto;
+    overflow-x: hidden;
 }
 .gallery {
     display: flex;
@@ -1618,7 +1674,6 @@ video {
 
 
 
-
   @media screen and (max-width: 480px) {
     .video-thumbnail {
       flex-basis: 100%; /* 1 video için tam genişlik ayrılacak */
@@ -1629,8 +1684,6 @@ video {
       flex-direction: column; /* Mobilde sıralama dikey olacak */
     }
   }
-  
-
 
 
 
@@ -1710,7 +1763,17 @@ video {
 
 /* Responsive tasarım için medya sorguları */
 @media only screen and (max-width: 768px) {
- 
+  
+    .top-video1 img {
+        width: 450px; 
+        
+    
+      }
+      
+      .top-video2 img {
+        width: 320px; 
+      
+      }
     .video-thumbnail {
         flex-basis: 45%; /* 1 video için 45% genişlik ayrılacak */
       }
@@ -2192,8 +2255,16 @@ video {
 }
 
 @media all and (max-width : 499px) {
+    .top-video1 img {
+        width:100%; 
+        
+    
+      }
+      .top-video2 img{
+        width: 100%;
+      }
     .slider{
-        top: 3%;
+        top:-5%;
     }
     .content {
         height:500px;
