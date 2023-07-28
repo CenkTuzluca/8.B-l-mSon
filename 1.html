@@ -485,38 +485,35 @@
             <h1>Video Galeri</h1>
 
         </div>
-        <div class="gallery">
-            <div class="video">
-                <video controls>
-                    <source src="video1.mp4" type="video/mp4">
-                    <!-- Alternatif formatlar ekleyebilirsiniz -->
-                    <!-- <source src="video1.webm" type="video/webm"> -->
-                    <!-- <source src="video1.ogv" type="video/ogg"> -->
-                    Tarayıcınız video etiketini desteklemiyorsa bu metin görüntülenecektir.
-                </video>
+        <div class="video-gallery">
+            <div class="top-row">
+              <div class="video-thumbnail top-video1" onclick="openModal('video1.mp4')">
+                <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 1">
+              </div>
+              <div class="video-thumbnail top-video2" onclick="openModal('video2.mp4')">
+                <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 2">
+              </div>
             </div>
-            <img class="gallery-img" src="/20200414_2_41891326_53925808_Web.png" alt="">
-
-            <div class="gallery-img-none">
-                <img src="/20200414_2_41891326_53925808_Web.png" alt="">
-                <img src="/20200414_2_41891326_53925808_Web.png" alt="">
-                <img src="/20200414_2_41891326_53925808_Web.png" alt="">
+            <div class="bottom-row">
+              <div class="video-thumbnail" onclick="openModal('video3.mp4')">
+                <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 3">
+              </div>
+              <div class="video-thumbnail" onclick="openModal('video4.mp4')">
+                <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 4">
+              </div>
+              <div class="video-thumbnail" onclick="openModal('video5.mp4')">
+                <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 5">
+              </div>
             </div>
-            <div class="gallery-imgler">
-
-                <img class="gallery-img" src="/20200414_2_41891326_53925808_Web.png" alt="">
-                <img class="gallery-img" src="/20200414_2_41891326_53925808_Web.png" alt="">
-                <img class="gallery-img" src="/20200414_2_41891326_53925808_Web.png" alt="">
-            </div>
-
-            <!-- Diğer videoları eklemek için benzer divler ekleyin -->
-            <!-- <div class="video">
-            <video controls>
-                <source src="video2.mp4" type="video/mp4">
+          </div>
+        
+          <div id="video-modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <video id="modal-video" controls>
+              <source src="" type="video/mp4">
             </video>
-        </div> -->
-        </div>
-
+          </div>
+         
     </section>
 
 
@@ -713,7 +710,7 @@
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '15px',
+        centerPadding: '50px',
         slidesToShow: 1
       }
     },
@@ -728,6 +725,21 @@
     }
   ]
 });
+function openModal(videoUrl) {
+  var modal = document.getElementById("video-modal");
+  var video = document.getElementById("modal-video");
+  video.src = videoUrl;
+  modal.style.display = "flex"; // Orta açılmak için "flex" olarak değiştiriyoruz
+}
+
+function closeModal() {
+  var modal = document.getElementById("video-modal");
+  var video = document.getElementById("modal-video");
+  video.pause();
+  video.currentTime = 0;
+  modal.style.display = "none";
+}
+
 
 
  </script>

@@ -1017,7 +1017,82 @@ label {
 .s5-doktor {
     width: 450px;
 }
-
+.video-gallery {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px; /* Sayfa kenarlarından boşluk bırakalım */
+  }
+  
+  .top-row, .bottom-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 20px'lik aralık bırakarak sırala */
+    flex-wrap: wrap; /* Yeterli alan olmadığında alt satıra geç */
+  }
+  
+  .video-thumbnail {
+    cursor: pointer;
+    flex-basis: 30%; /* 1 video için 30% genişlik ayrılacak */
+    max-width: 300px; /* En fazla 300px genişliğinde olacak */
+    margin-bottom: 20px; /* Video thumbnail'ları arasında boşluk bırakalım */
+  }
+  
+  .video-thumbnail img {
+    width: 100%; /* Resmi kapsamak için genişlik %100 */
+    height: auto; /* Yükseklik otomatik olarak ayarlanacak */
+  }
+  
+  .bottom-row {
+    margin-top: 20px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-video {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .close {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+  }
+  
+  /* Responsive ekran boyutları için düzenlemeler */
+  @media screen and (max-width: 768px) {
+    .video-thumbnail {
+      flex-basis: 45%; /* 1 video için 45% genişlik ayrılacak */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .video-thumbnail {
+      flex-basis: 100%; /* 1 video için tam genişlik ayrılacak */
+      max-width: 100%; /* En fazla 100% genişliğinde olacak */
+    }
+  
+    .top-row, .bottom-row {
+      flex-direction: column; /* Mobilde sıralama dikey olacak */
+    }
+  }
+  
 .s5DoktorDiv {
     height: 100%;
 }
