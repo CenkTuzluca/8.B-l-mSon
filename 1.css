@@ -146,7 +146,7 @@ nav ul li:hover>ul {
 nav ul ul li {
     width: 230px;
     float: none;
-    height: 75px;
+    height: 60px;
     display: list-item;
     position: relative;
     z-index: 999;
@@ -630,6 +630,7 @@ label {
     color: black;
     margin-top: 2rem;
     font-size: 1.3rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -676,10 +677,11 @@ label {
 .image-wrapper {
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .responsive-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -885,7 +887,8 @@ label {
 .text span {
     margin: 0 40px;
     padding: 15px 20px 15px 20px;
-    border-radius: 15px
+    border-radius: 15px;
+    background-color: #F6F1F1;
 }
 
 @keyframes animate_text {
@@ -970,6 +973,7 @@ label {
 .s5-text1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
+    line-height: 45px;
     color: white;
 }
 
@@ -1094,7 +1098,9 @@ video {
   }
   .footer__addr h2 {
     margin-top: 1.3em;
+    line-height: 1.2rem;
     font-size: 13px;
+    width: 80%;
     font-weight: 400;
 
   }
@@ -1132,7 +1138,7 @@ video {
   }
   
   .footer li {
-    line-height: 1.5em;
+    line-height:1.1em;
   }
   
   .footer a {
@@ -1199,7 +1205,7 @@ video {
   .Yararlı-Bilgi{
     max-width: 1100px;
     margin: auto;
-    height: 80vh;
+   
     margin-bottom: 1rem;
 
   }
@@ -1250,12 +1256,12 @@ video {
     box-shadow: 0 0 1px;
     border-radius: 0px 25px 25px 0px;
     height: 233px;
-    padding: 3rem;
+    padding: 35px 0px 0px 35px;
     font-size: .8rem;
     line-height: 0px;
 }
 .Yararlı-Bilgi-Sağ-Con h1{
-    line-height: 40px;
+    line-height: 25px;
 }
 .Yararlı-Bilgi-Sol-Con h1{
     line-height: 40px;
@@ -1435,6 +1441,8 @@ video {
 }
 .nav__ul li a {
     display: flex;
+    align-items: center;
+
 }
 .nav__ul li a i {
    font-size: 1.5rem;
@@ -1715,12 +1723,12 @@ video {
 
 @media all and (max-width : 662px) {
     .Yararlı-Bilgi{
-        max-width: 1100px;
-        margin: auto;
-
-        margin-bottom: 1rem;
+        
+        height: 150vh;
+       
     
       }
+    
     .Yararlı-Bilgi-Sağ-İmg2 img {
        
         height: 135px;
@@ -2238,9 +2246,7 @@ video {
 
     }
 
-    .text-overlay h1 {
-        font-size: .5rem;
-    }
+   
 
     .text-overlay p {
         font-size: .5rem;
