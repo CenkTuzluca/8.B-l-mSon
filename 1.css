@@ -1075,23 +1075,6 @@ label {
     cursor: pointer;
   }
   
-  /* Responsive ekran boyutları için düzenlemeler */
-  @media screen and (max-width: 768px) {
-    .video-thumbnail {
-      flex-basis: 45%; /* 1 video için 45% genişlik ayrılacak */
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .video-thumbnail {
-      flex-basis: 100%; /* 1 video için tam genişlik ayrılacak */
-      max-width: 100%; /* En fazla 100% genişliğinde olacak */
-    }
-  
-    .top-row, .bottom-row {
-      flex-direction: column; /* Mobilde sıralama dikey olacak */
-    }
-  }
   
 .s5DoktorDiv {
     height: 100%;
@@ -1636,6 +1619,17 @@ video {
 
 
 
+  @media screen and (max-width: 480px) {
+    .video-thumbnail {
+      flex-basis: 100%; /* 1 video için tam genişlik ayrılacak */
+      max-width: 100%; /* En fazla 100% genişliğinde olacak */
+    }
+  
+    .top-row, .bottom-row {
+      flex-direction: column; /* Mobilde sıralama dikey olacak */
+    }
+  }
+  
 
 
 
@@ -1717,6 +1711,9 @@ video {
 /* Responsive tasarım için medya sorguları */
 @media only screen and (max-width: 768px) {
  
+    .video-thumbnail {
+        flex-basis: 45%; /* 1 video için 45% genişlik ayrılacak */
+      }
     .gallery-imgler{
     display: none;
    
