@@ -863,6 +863,7 @@ label {
 }
 
 .scrolling_text {
+    z-index: 99;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -874,6 +875,7 @@ label {
 
 .text {
     font-size: 80px;
+
     font-weight: 700;
     text-transform: uppercase;
     color: #B4B1B1;
@@ -882,6 +884,8 @@ label {
 .text span:hover {
     background-color: #17B0D9;
     color: white;
+
+ 
 }
 
 .text span {
@@ -900,7 +904,12 @@ label {
         transform: translate3d(-100%, 0, 0);
     }
 }
-
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 .text {
     font-size: 20px;
     font-weight: 500;
