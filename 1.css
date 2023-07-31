@@ -924,9 +924,10 @@ label {
     margin: 3rem;
     background-color: white;
    
+   
 }
 .slider-container {
-
+ 
     position: relative;
     width: 100%;
     height: 100vh;
@@ -1495,17 +1496,39 @@ video {
 
 
 
+.Aktiviteler-content{
+    padding: 2rem;
+    border-radius: 15px 20px 40px 50px;
+}
 
 
+.slick-slide.blur {
+  
+    filter: blur(5px);
+    /* İstediğiniz derecede blur efekti ekleyebilirsiniz */
+    transition: filter 0.3s ease;
+  }
 
+/* Slaytların dışındaki slaytların opaklığını ayarlayın */
+.slick-slide:not(.slick-center) {
+    opacity: 0.3;
+    /* İstediğiniz derecede opaklık ayarlayabilirsiniz */
+    transition: opacity 0.3s ease;
+  }
+  /* Center slayta özel stil */
+  .slick-center {
 
-
-
+    opacity: 1;
+    /* Merkez slayt tamamen görünür olacak */
+    transition: opacity 0.3s ease;
+  }
+  
 
 
 .Aktiviteler {
     position: relative;
     height: 100vh;
+  
    background-image: url(/river-surrounded-by-forests-cloudy-sky-thuringia-germany.png);
     background-size: cover;
 
@@ -1524,8 +1547,6 @@ video {
   .slider {
     position: absolute;
     top: 5%;
-
- 
     max-width: 1150px;
   }
 
