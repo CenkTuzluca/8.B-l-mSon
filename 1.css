@@ -1516,14 +1516,14 @@ video {
 
   .slider {
     position: absolute;
-    top: 15%;
+    top: 5%;
 
  
-    max-width: 900px;
+    max-width: 1150px;
   }
 
   .slide {
-
+    
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Kayan kutunun gölgesini buradan ayarlayabilirsiniz */
   }
@@ -1533,6 +1533,7 @@ video {
     height: auto;
     display: block;
     margin-bottom: 10px;
+    
   }
 
   .content {
