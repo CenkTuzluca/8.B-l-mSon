@@ -1140,6 +1140,13 @@ label {
 
 
 
+  .top-row .video-thumbnail:not(:last-child) img {
+    /* Diğer üstteki thumbnail'ların boyutu aynı kalacak */
+    width: 670px;
+    height: 200px;
+  }
+ 
+
 
 
 
@@ -1523,7 +1530,7 @@ video {
   }
 
   .slide {
-    
+  
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Kayan kutunun gölgesini buradan ayarlayabilirsiniz */
   }
@@ -1591,12 +1598,6 @@ video {
 
 
 
-
-
-
-
-
-
 .s5-textDiv{
     margin: 4rem;
 }
@@ -1611,10 +1612,9 @@ video {
 
 
 
+  
 
-
-
-
+  
 
 
 
@@ -1781,7 +1781,12 @@ video {
 
 /* Responsive tasarım için medya sorguları */
 @media only screen and (max-width: 768px) {
-  
+    .top-row .video-thumbnail:not(:last-child) img {
+        /* Diğer üstteki thumbnail'ların boyutu aynı kalacak */
+        width: 100%;
+        height: 200px;
+      }
+     
     .top-video1 img {
         width: 450px; 
         
