@@ -875,7 +875,7 @@ label {
 
 .text {
     font-size: 80px;
-
+    z-index: -99;
     font-weight: 700;
     text-transform: uppercase;
     color: #B4B1B1;
