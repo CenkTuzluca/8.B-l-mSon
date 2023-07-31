@@ -486,35 +486,36 @@
             <h1>Video Galeri</h1>
 
         </div>
-        <div class="video-gallery">
-            <div class="top-row">
-                <div class="video-thumbnail top-video1" onclick="openModal('video1.mp4')">
-                    <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 1">
-                </div>
-                <div class="video-thumbnail top-video2" onclick="openModal('video2.mp4')">
-                    <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 2">
-                </div>
-            </div>
-            <div class="bottom-row">
-                <div class="video-thumbnail" onclick="openModal('video3.mp4')">
-                    <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 3">
-                </div>
-                <div class="video-thumbnail" onclick="openModal('video4.mp4')">
-                    <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 4">
-                </div>
-                <div class="video-thumbnail" onclick="openModal('video5.mp4')">
-                    <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 5">
-                </div>
-            </div>
-        </div>
+    <!-- Video Galeri -->
+  <div class="video-gallery">
+    <div class="top-row">
+      <div class="video-thumbnail" onclick="openModal('video1.mp4')">
+        <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 1">
+      </div>
+      <div class="video-thumbnail" onclick="openModal('video2.mp4')">
+        <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 2">
+      </div>
+    </div>
+    <div class="bottom-row">
+      <div class="video-thumbnail" onclick="openModal('video3.mp4')">
+        <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 3">
+      </div>
+      <div class="video-thumbnail" onclick="openModal('video4.mp4')">
+        <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 4">
+      </div>
+      <div class="video-thumbnail" onclick="openModal('video5.mp4')">
+        <img src="/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees (1).png" alt="Video 5">
+      </div>
+    </div>
+  </div>
 
-        <div id="video-modal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <video id="modal-video" controls>
-                <source src="" type="video/mp4">
-            </video>
-        </div>
-
+  <!-- Video Modal -->
+  <div id="video-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <video id="modal-video" controls>
+      <source src="" type="video/mp4">
+    </video>
+  </div>
     </section>
 
 
@@ -729,7 +730,8 @@
             
 
 
-            document.addEventListener("DOMContentLoaded", function() {
+    // scripts.js
+document.addEventListener("DOMContentLoaded", function() {
   var videoThumbnails = document.querySelectorAll(".video-thumbnail");
   var modal = document.getElementById("video-modal");
   var modalVideo = document.getElementById("modal-video");
@@ -754,28 +756,21 @@
     document.body.style.overflow = "auto"; // Sayfanın kaydırma işlemini aç
   }
 
+  // Modal dışına tıklandığında kapatma işlemi
   modal.addEventListener("click", function(event) {
     if (event.target === modal) {
       closeModal();
     }
   });
 
+  // Escape tuşuna basıldığında kapatma işlemi
   document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
       closeModal();
     }
   });
-
-  // Modal kapatıldığında sayfanın en üstüne kaydır
-  modal.addEventListener("transitionend", function() {
-    if (modal.style.display === "none") {
-      window.scrollTo(0, 0);
-    }
-  });
-
-  // Sayfa yüklendiğinde modal gizli olacak
-  modal.style.display = "none";
 });
+
 
 
 
