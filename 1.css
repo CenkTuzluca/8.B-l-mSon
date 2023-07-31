@@ -1034,8 +1034,12 @@ label {
     transform: translateX(-50%);
     background-color:#17B0D9;
     color: #fff;
-    padding: 20px 60px;
-    border-radius: 50% 50% 0% 0%;
+    width: 145px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:100px 100px 0 0;
     cursor: pointer;
   
     
@@ -1592,7 +1596,9 @@ video {
 
 
 
-
+.s5-textDiv{
+    margin: 4rem;
+}
 
 
 
