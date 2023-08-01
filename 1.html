@@ -686,14 +686,14 @@
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
-            centerPadding: '50px'
+            centerPadding: '0px'
           }
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            centerPadding: '25px'
+            centerPadding: '0px'
           }
         }
       ],
@@ -717,8 +717,9 @@
     $('.slick-slide').removeClass('blur');
   }
 
+  // Tarayıcı boyutu değiştiğinde veya sayfa yüklendiğinde slayt gösterisi görünürlüğünü kontrol et
   function checkSliderVisibility() {
-    if ($(window).width() <= 500) {
+    if ($(window).width() <= 480) {
       if (sliderInitialized) {
         $('.slider-container').slick('unslick');
         sliderInitialized = false;
