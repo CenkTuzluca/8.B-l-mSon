@@ -926,17 +926,27 @@ label {
    
    
 }
+
 .slider-container {
  
     position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url('/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees\ \(1\).png');
+    width: 1200px;
+   
+    height: auto;
+  
     background-size: cover;
     background-repeat: no-repeat;
-    filter: brightness(.5);
+   
 }
-
+.txt-orta-beyaz{
+    color: white;
+    filter: brightness(1);
+    margin-bottom: 0rem;
+    font-size: 1.3rem;
+}
+.Aktiviteler-img img{
+    border-radius: 10px 10px 0px 0px;
+}
 .slick-slider {
    
   
@@ -1524,12 +1534,14 @@ video {
   }
   
 
-
+.Aktiviteler-content p{
+    width: 70%;
+}
 .Aktiviteler {
     position: relative;
     height: 100vh;
-  
-   background-image: url(/river-surrounded-by-forests-cloudy-sky-thuringia-germany.png);
+  z-index: 99;
+   background-image: url(/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees\ \(1\).png);
     background-size: cover;
 
   }
@@ -2053,6 +2065,9 @@ video {
 }
 
 @media all and (max-width : 1255px) {
+    .slider-container{
+        width: 100%;
+    }
     .responsive-image {
         height: 83vh;
     }
@@ -2304,6 +2319,14 @@ video {
 }
 
 @media all and (max-width : 499px) {
+    .slider-container{
+        width: 50%;
+        width: 10%;
+    }
+    .Aktiviteler-img img{
+        width: 150px;
+        height: 50px;
+    }
     .top-video1 img {
         width:100%; 
         
