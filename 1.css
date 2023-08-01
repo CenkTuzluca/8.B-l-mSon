@@ -1539,7 +1539,7 @@ video {
 }
 .Aktiviteler {
     position: relative;
-    height: 100vh;
+    
   z-index: 99;
    background-image: url(/beautiful-scenery-road-forest-with-lot-colorful-autumn-trees\ \(1\).png);
     background-size: cover;
@@ -2319,14 +2319,9 @@ video {
 }
 
 @media all and (max-width : 499px) {
-    .slider-container{
-        width: 50%;
-        width: 10%;
-    }
-    .Aktiviteler-img img{
-        width: 150px;
-        height: 50px;
-    }
+  
+   
+ 
     .top-video1 img {
         width:100%; 
         

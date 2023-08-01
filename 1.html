@@ -671,27 +671,43 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
         <script>
-      $(document).ready(function() {
-  $('.slider-container').slick({
-    slidesToShow: 1, // Görünen slayt sayısı, center mode için en az 3 olmalıdır
-    slidesToScroll: 1,
-    centerMode: true, // Center mode'u etkinleştirin
-    centerPadding: '75px', // Ortadaki slaytın sol ve sağ kenarlarındaki boşluk
-    prevArrow: $('.slider-prev'),
-    nextArrow: $('.slider-next'),
-    dots: false,
-    
-    /* Diğer özelleştirmeleri ekleyin */
-    onInit: function() {
-      addBlur();
-    },
-    onBeforeChange: function() {
-      removeBlur();
-    },
-    afterChange: function() {
-      addBlur();
-    }
-  });
+ $(document).ready(function() {
+  function initializeSlider() {
+    $('.slider-container').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '75px',
+      prevArrow: $('.slider-prev'),
+      nextArrow: $('.slider-next'),
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '50px'
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '25px'
+          }
+        }
+      ],
+      onInit: function() {
+        addBlur();
+      },
+      onBeforeChange: function() {
+        removeBlur();
+      },
+      afterChange: function() {
+        addBlur();
+      }
+    });
+  }
 
   function addBlur() {
     $('.slick-slide').not('.slick-center').addClass('blur');
@@ -700,8 +716,31 @@
   function removeBlur() {
     $('.slick-slide').removeClass('blur');
   }
-});
 
+  function checkSliderVisibility() {
+    if ($(window).width() <= 500) {
+      if (sliderInitialized) {
+        $('.slider-container').slick('unslick');
+        sliderInitialized = false;
+      }
+    } else {
+      if (!sliderInitialized) {
+        initializeSlider();
+        sliderInitialized = true;
+      }
+    }
+  }
+
+  var sliderInitialized = false;
+
+  // Tarayıcı boyutu değiştiğinde slayt gösterisi görünürlüğünü kontrol et
+  $(window).on('resize', function() {
+    checkSliderVisibility();
+  });
+
+  // Sayfa yüklendiğinde slayt gösterisi görünürlüğünü kontrol et
+  checkSliderVisibility();
+});
 
     // scripts.js
 document.addEventListener("DOMContentLoaded", function() {
